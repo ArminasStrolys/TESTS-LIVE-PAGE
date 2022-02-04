@@ -4,8 +4,7 @@ body {
 }
 
 #form-box {
-  width: 900px;
-  height: 600;
+  width: 30%;
   margin: 0 auto;
   margin-top: 200px;
   padding: 100px;
@@ -14,7 +13,7 @@ body {
 
 #form-box .container {
   margin: 0 auto;
-  width: 800px;
+  width: fit-content;
   padding: 50px 50px 30px 50px;
   background-color: rgb(255, 255, 255);
 }
@@ -33,6 +32,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+#form-box .container form input::placeholder,
+#form-box .container form textarea::placeholder {
+  color: rgb(0, 22, 223);
+}
 
 #form-box .container form div {
   width: 50%;
@@ -47,8 +50,8 @@ body {
   width: 100%;
 }
 
-#form-box .container form div input,
-#form-box .container form div textarea {
+#form-box .container form input,
+#form-box .container form textarea {
   width: 100%;
   margin: 10px 0;
   padding: 20px 0 20px 30px;
@@ -56,16 +59,15 @@ body {
   border-style: none;
   background-color: rgb(226, 234, 255);
   font-size: 18px;
-  color: rgb(0, 22, 223);
   font-weight: 500;
   box-sizing: border-box;
 }
 
-#form-box .container form div:nth-of-type(3) input {
+#form-box .container form .unique {
   background-color: rgb(204, 213, 255);
 }
 
-#form-box .container form div textarea {
+#form-box .container form textarea {
   background-color: rgb(170, 183, 241);
   font-family: sans-serif;
   height: 150px;
@@ -84,6 +86,11 @@ body {
   color: white;
   background-color: rgb(56, 76, 255);
   font-size: 18px;
+  transition: all ease-in-out 0.2s;
+}
+#form-box .container form button:hover {
+  background-color: rgb(24, 40, 189);
+  cursor: pointer;
 }
 
 #form-box .container span {
